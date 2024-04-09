@@ -63200,9 +63200,7 @@ function DeprecatedOctokit(options) {
   return new OctokitRest(options);
 }
 
-const Octokit = Object.assign(DeprecatedOctokit, {
-  Octokit: OctokitRest
-});
+const { Octokit } = require("@octokit/rest");
 
 Object.keys(OctokitRest).forEach(key => {
   /* istanbul ignore else */
